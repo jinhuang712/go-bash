@@ -175,7 +175,7 @@ func withDir(dir string) interp.RunnerOption {
 // name with it is neither a function nor a builtin of the interpreter, so the
 // call reaches the exec handler, which is the only place a command runs. A
 // word of the script cannot hold a NUL, so the prefix cannot be forged.
-const commandPrefix = "gotato\x00"
+const commandPrefix = "go-bash\x00"
 
 // callHandler runs on every simple command, builtins included, and sends all
 // of them to the exec handler under a name the interpreter does not know.

@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jinhuang712/gotato/adapter/bash"
+	"github.com/jinhuang712/go-bash"
 )
 
 // A jq program that does not end is stopped by the deadline of the run (a

@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jinhuang712/gotato/adapter/bash"
+	"github.com/jinhuang712/go-bash"
 )
 
 // generated is a file system with one file, /gen, of size bytes of short lines

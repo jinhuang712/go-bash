@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jinhuang712/gotato/adapter/bash"
+	"github.com/jinhuang712/go-bash"
 )
 
 var safetyFiles = map[string]string{"results/a": "alpha\nbeta\n", "results/b": "Beta two\n"}

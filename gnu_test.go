@@ -13,20 +13,20 @@ import (
 
 // TestAgainstGNU runs the conformance table against installed GNU tools and
 // checks that the expectations in the table are what GNU gives. It is for
-// development and CI of this module only: it runs only when GOTATO_GNU=1, and
+// development and CI of this module only: it runs only when GOBASH_GNU=1, and
 // the engine never starts a program.
 //
 // The tools are found as <prefix>cat, <prefix>head, <prefix>grep and so on,
-// where the prefix is GOTATO_GNU_PREFIX ("g" on macOS, where Homebrew installs
+// where the prefix is GOBASH_GNU_PREFIX ("g" on macOS, where Homebrew installs
 // GNU coreutils, sed and grep under that name, and empty elsewhere). echo is
 // not looked for: the script runs in bash, whose builtin is what the engine's
 // echo follows. LC_ALL is C.UTF-8 unless you set it: the table assumes UTF-8,
 // and sort orders by code point there (see the usage text of sort).
 func TestAgainstGNU(t *testing.T) {
-	if os.Getenv("GOTATO_GNU") != "1" {
-		t.Skip("set GOTATO_GNU=1 to compare with installed GNU tools")
+	if os.Getenv("GOBASH_GNU") != "1" {
+		t.Skip("set GOBASH_GNU=1 to compare with installed GNU tools")
 	}
-	prefix, ok := os.LookupEnv("GOTATO_GNU_PREFIX")
+	prefix, ok := os.LookupEnv("GOBASH_GNU_PREFIX")
 	if !ok && runtime.GOOS == "darwin" {
 		prefix = "g"
 	}

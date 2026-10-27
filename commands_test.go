@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/jinhuang712/gotato/adapter/bash"
+	"github.com/jinhuang712/go-bash"
 )
 
 // What a command does not support is an error that says so and says what is

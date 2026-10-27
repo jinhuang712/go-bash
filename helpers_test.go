@@ -10,7 +10,7 @@ import (
 	"testing/fstest"
 	"time"
 
-	"github.com/jinhuang712/gotato/adapter/bash"
+	"github.com/jinhuang712/go-bash"
 )
 
 // mapFS builds a file system from name -> content; the names are paths without

@@ -4,7 +4,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/jinhuang712/gotato/adapter/bash"
+	"github.com/jinhuang712/go-bash"
 )
 
 // A line over the limit is cut with a marker that gives the size of the whole
