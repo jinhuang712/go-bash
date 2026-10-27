@@ -3,7 +3,7 @@
 A read-only bash subset over an `fs.FS`, in plain Go. It runs a model's `grep`, `jq`, `sed -n`, `head` and the like over data it is given, with no machine behind it: no process, no network, no write.
 
 ```go
-out, err := bash.Run(ctx, fsys, `grep -n '"id": "A-17"' /results/call_1 | head -3`)
+res, err := bash.Run(ctx, `grep -n '"id": "A-17"' /results/call_1 | head -3`, fsys)
 ```
 
 ## What it is

@@ -1,10 +1,8 @@
 // Package bash runs a read-only subset of bash over an io/fs.FS, in process.
 //
-// It is the engine behind Gotato's bash tool (FEATURES.md, G-F36): the model
-// queries the data of its own Session with the pipelines it already knows, and
-// nothing runs outside the process. The package does not import Gotato. It
-// takes a command string, an fs.FS and a context, and returns stdout, stderr
-// and an exit code.
+// A model queries data it was given with the pipelines it already knows, and
+// nothing runs outside the process. The package takes a command string, an
+// fs.FS and a context, and returns stdout, stderr and an exit code.
 //
 // The script is parsed by mvdan.cc/sh in bash mode and checked before anything
 // runs: loops, functions, command substitution, writing redirects and the
